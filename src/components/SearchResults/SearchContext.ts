@@ -1,3 +1,11 @@
 import { createContext } from "react";
+import { ContextState } from "../../types";
 
-export const SearchContext = createContext({ users: [] });
+const initialState: ContextState = {
+    users: [],
+    isError: false, 
+    isLoading: false,
+    isNotFound: false 
+}
+
+export const SearchContext = createContext(initialState);
